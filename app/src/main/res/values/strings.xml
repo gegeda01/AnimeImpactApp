@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Anime Impact</string>
+    
+    <string-array name="top_picks_type">
+        <item>Special BLack Edition</item>
+        <item>Ichibansho Figure</item>
+        <item>Printed T-Shirt</item>
+    </string-array>
+    <string-array name="top_picks_name">
+        <item>Detective Conan</item>
+        <item>One Piece</item>
+        <item>Naruto</item>
+    </string-array>
 </resources>

@@ -40,7 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/grey_boarder"
+        android:background="@drawable/grey_border"
         android:drawableLeft="@android:drawable/ic_menu_search"
         android:drawablePadding="12dp"
         android:ems="10"
@@ -69,13 +69,19 @@
         android:id="@+id/topPicksView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topPicks"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topPicksView"
+        />
 
 
 
