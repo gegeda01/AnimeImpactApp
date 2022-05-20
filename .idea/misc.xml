@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/OEM/Documents/GitHub/project-2-team-6/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.17715827338129497" />
+        <entry key="app/src/main/res/drawable/grey_boarder.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/image_border.xml" value="0.1415" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/column_categories 3.xml" value="0.16973065412569474" />
+        <entry key="app/src/main/res/layout/column_categories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/row_categories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/row_toppicks 2.xml" value="0.16973065412569474" />
+        <entry key="app/src/main/res/layout/row_toppicks.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_activity_search.xml" value="0.1" />
       </map>
     </option>
   </component>
