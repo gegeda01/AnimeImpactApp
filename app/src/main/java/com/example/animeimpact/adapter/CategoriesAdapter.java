@@ -1,6 +1,8 @@
 package com.example.animeimpact.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.animeimpact.ListActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.model.CategoriesItem;
 
@@ -33,9 +37,19 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoriesViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoriesViewHolder holder, @SuppressLint("RecyclerView")  int position) {
         holder.myText.setText(categoriesItemLists.get(position).getText());
         holder.myImage.setImageResource(categoriesItemLists.get(position).getImageurl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,ListActivity.class);
+                i.putExtra("myText", categoriesItemLists.get(position).getText());
+
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -48,10 +62,14 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
         TextView myText;
         ImageView myImage;
+
+        ConstraintLayout categoriesLayout;
+
         public CategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
             myImage = itemView.findViewById(R.id.categoriesImage);
             myText = itemView.findViewById(R.id.categoriesTitle);
+            categoriesLayout = itemView.findViewById(R.id.categoriesLayout);
         }
     }
 }
