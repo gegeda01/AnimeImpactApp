@@ -63,13 +63,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
         TextView myText;
         ImageView myImage;
 
-        ConstraintLayout categoriesLayout;
+
 
         public CategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
             myImage = itemView.findViewById(R.id.categoriesImage);
             myText = itemView.findViewById(R.id.categoriesTitle);
-            categoriesLayout = itemView.findViewById(R.id.categoriesLayout);
         }
     }
 }

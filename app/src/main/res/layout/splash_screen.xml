@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/touch_screen"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/image6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Anime Impact"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@id/touch_screen"
+        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

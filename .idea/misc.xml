@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.17715827338129497" />
+        <entry key="app/src/main/res/drawable/bg_color2.xml" value="0.122" />
+        <entry key="app/src/main/res/drawable/bg_color3.xml" value="0.244" />
         <entry key="app/src/main/res/drawable/grey_boarder.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/grey_border.xml" value="0.1945" />
         <entry key="app/src/main/res/drawable/ic_anime_impact__1_.xml" value="0.1" />
@@ -19,6 +21,7 @@
         <entry key="app/src/main/res/layout/row_lists.xml" value="0.29465095194922936" />
         <entry key="app/src/main/res/layout/row_toppicks 2.xml" value="0.16973065412569474" />
         <entry key="app/src/main/res/layout/row_toppicks.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/splash_screen.xml" value="0.22445489525438223" />
         <entry key="app/src/main/res/menu/menu_activity_search.xml" value="0.1" />
       </map>
     </option>

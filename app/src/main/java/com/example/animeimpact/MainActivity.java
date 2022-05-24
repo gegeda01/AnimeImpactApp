@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
         topPicksItemList.add(new TopPicksItem(R.drawable.onepiece_figure,"Ichibansho Figure","One Piece"));
         topPicksItemList.add(new TopPicksItem(R.drawable.naruto_printed_shirt,"Printed T-Shirt","Naruto"));
         topPicksItemList.add(new TopPicksItem(R.drawable.slayer_clothing2,"Cosplay","Slayer Demon"));
-        topPicksItemList.add(new TopPicksItem(R.drawable.jojo_volume27,"Volume 27","Jojo"));
+        topPicksItemList.add(new TopPicksItem(R.drawable.jojo_volume27,"Manga volume 27","Jojo"));
 
         categoriesViewer = findViewById(R.id.categoriesView);
         categoriesItemList = new ArrayList<>();
-        categoriesItemList.add(new CategoriesItem(R.drawable.main_manga,"Manga"));
-        categoriesItemList.add(new CategoriesItem(R.drawable.main_figure,"Anime Figures"));
-        categoriesItemList.add(new CategoriesItem(R.drawable.main_clothing,"Clothing Store"));
+        categoriesItemList.add(new CategoriesItem(R.drawable.manga,"Manga"));
+        categoriesItemList.add(new CategoriesItem(R.drawable.figure,"Anime Figures"));
+        categoriesItemList.add(new CategoriesItem(R.drawable.clothing,"Clothing Store"));
 
         setTopPicksViewer(topPicksItemList);
         setCategoriesViewer(categoriesItemList);

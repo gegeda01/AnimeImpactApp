@@ -3,7 +3,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     android:layout_marginStart="14dp">
 
     <ImageView
@@ -22,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:textSize="10sp"
-        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topPicksImage"
@@ -38,7 +37,7 @@
         android:textSize="15sp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topPicksType"/>
 
