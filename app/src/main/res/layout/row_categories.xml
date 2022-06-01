@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height= "wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginStart="35dp"
     android:id="@+id/categoriesLayout"
     app:cardCornerRadius="16dp"
     app:cardElevation="3dp"
@@ -27,15 +26,15 @@
             android:id="@+id/categoriesTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/fugaz_one"
             android:gravity="center"
-            android:layout_marginRight="20dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/categoriesImage"/>
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/categoriesImage"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>

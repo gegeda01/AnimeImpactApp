@@ -29,6 +29,12 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".DetailsActivity"
+            android:parentActivityName=".ListActivity"></activity>
+
+        <activity android:name=".TopPicksDetailActivity"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
