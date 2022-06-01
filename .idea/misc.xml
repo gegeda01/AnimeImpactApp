@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/drawable/ic_anime_impact__1_.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sort.xml" value="0.117" />
         <entry key="app/src/main/res/drawable/image_border.xml" value="0.1415" />
+        <entry key="app/src/main/res/drawable/purple_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/text.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/title_bg.xml" value="0.1945" />
@@ -24,6 +25,7 @@
         <entry key="app/src/main/res/layout/row_lists.xml" value="0.29465095194922936" />
         <entry key="app/src/main/res/layout/row_toppicks 2.xml" value="0.16973065412569474" />
         <entry key="app/src/main/res/layout/row_toppicks.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/search_activity.xml" value="0.19356300997280146" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.22445489525438223" />
         <entry key="app/src/main/res/menu/menu_activity_search.xml" value="0.1" />
         <entry key="app/src/main/res/menu/sort.xml" value="0.25" />

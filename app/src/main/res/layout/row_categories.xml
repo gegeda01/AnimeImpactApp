@@ -30,7 +30,11 @@
             android:fontFamily="@font/fugaz_one"
             android:gravity="center"
             android:textColor="@color/white"
+<<<<<<< Updated upstream
             android:textSize="20sp"
+=======
+            android:textSize="24sp"
+>>>>>>> Stashed changes
             app:layout_constraintLeft_toRightOf="@id/categoriesImage"
             app:layout_constraintTop_toTopOf="parent" />
 

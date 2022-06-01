@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< Updated upstream
 
     <EditText
         android:id="@+id/search"
@@ -49,6 +50,24 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+=======
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="SEARCH"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/grey_border"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:paddingStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+>>>>>>> Stashed changes
 
             <TextView
                 android:id="@+id/topPicks"
@@ -62,7 +81,11 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
+<<<<<<< Updated upstream
                 app:layout_constraintTop_toBottomOf="@+id/search" />
+=======
+                app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+>>>>>>> Stashed changes
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topPicksView"
@@ -82,7 +105,11 @@
         android:layout_marginTop="25dp"
         android:text="Categories"
         android:fontFamily="@font/fugaz_one"
+<<<<<<< Updated upstream
         android:textSize="26sp"
+=======
+        android:textSize="29sp"
+>>>>>>> Stashed changes
         android:gravity="center"
         android:textColor="@color/white"
         android:textStyle="bold"

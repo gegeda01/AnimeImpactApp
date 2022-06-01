@@ -23,8 +23,14 @@
                 android:layout_height="wrap_content"
                 android:text="BACK"
                 android:textStyle="bold"
+<<<<<<< Updated upstream
                 android:textSize="25sp"
                 android:textColor="@color/white"
+=======
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one"
+>>>>>>> Stashed changes
                 android:background="@drawable/grey_border"
                 android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,17 +45,34 @@
                 android:scaleType="centerCrop"
                 android:background="@drawable/image_border"
                 app:iss_auto_cycle="true"
+<<<<<<< Updated upstream
                 app:iss_period="3000">
+=======
+                app:iss_period="1000">
+>>>>>>> Stashed changes
             </com.denzcoskun.imageslider.ImageSlider>
 
             <TextView
                 android:id="@+id/itemPrice"
+<<<<<<< Updated upstream
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textSize="30dp"
                 android:text="$59.99">
+=======
+                android:background="@drawable/purple_border"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/fugaz_one"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:text="Price">
+>>>>>>> Stashed changes
             </TextView>
 
             <TextView
@@ -59,8 +82,15 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
+<<<<<<< Updated upstream
                 android:textSize="36dp"
                 android:text="KAITO-KID Figure">
+=======
+                android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one"
+                android:textSize="36dp"
+                android:text="ITEM NAME">
+>>>>>>> Stashed changes
             </TextView>
 
             <TextView
@@ -70,8 +100,15 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
+<<<<<<< Updated upstream
                 android:textSize="20dp"
                 android:text="item details">
+=======
+                android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one"
+                android:textSize="20dp"
+                android:text="Item details">
+>>>>>>> Stashed changes
             </TextView>
 
             <TextView
@@ -80,9 +117,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+<<<<<<< Updated upstream
                 android:textSize="16dp"
                 android:text="item description">
             </TextView>
+=======
+                android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one"
+                android:textSize="16dp"
+                android:text="Item description">
+            </TextView>
+
+            <Button
+                android:id="@+id/buyButton"
+                android:background="@drawable/purple_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:text="PURCHASE"
+                />
+>>>>>>> Stashed changes
         </LinearLayout>
 
     </ScrollView>

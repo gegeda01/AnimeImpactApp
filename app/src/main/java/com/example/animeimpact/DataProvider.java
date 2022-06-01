@@ -2,6 +2,10 @@ package com.example.animeimpact;
 
 import com.example.animeimpact.model.CategoriesItem;
 import com.example.animeimpact.model.ListItem;
+<<<<<<< Updated upstream
+=======
+import com.example.animeimpact.model.SearchItem;
+>>>>>>> Stashed changes
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -80,5 +84,44 @@ public class DataProvider {
         return listItemsList;
     }
 
+<<<<<<< Updated upstream
+=======
+    public static ArrayList<SearchItem> generateSearchList(){
+        ArrayList<SearchItem> searchItemsList = new ArrayList<SearchItem>();
+        searchItemsList.add(new SearchItem("One Piece","Volume 9",19,R.drawable.op111));
+        searchItemsList.add(new SearchItem("Detective Conan","Volume 61",29,R.drawable.dc111));
+        searchItemsList.add(new SearchItem("Demon Slayer","Volume 3",29,R.drawable.ds111));
+        searchItemsList.add(new SearchItem("Demon Slayer","Cosplay",49,R.drawable.ds311));
+        searchItemsList.add(new SearchItem("Naruto","Volume 6",29,R.drawable.n111));
+        searchItemsList.add(new SearchItem("One Piece","Volume 97",19,R.drawable.op121));
+        searchItemsList.add(new SearchItem("One Piece","Figure 1",69,R.drawable.op211));
+        searchItemsList.add(new SearchItem("One Piece","Figure 2",59,R.drawable.op221));
+        searchItemsList.add(new SearchItem("One Piece","T shirt",29,R.drawable.op311));
+        searchItemsList.add(new SearchItem("One Piece","Hat",19,R.drawable.op321));
+        searchItemsList.add(new SearchItem("Detective Conan","Special Edition",39,R.drawable.dc121));
+        searchItemsList.add(new SearchItem("Detective Conan","Figure 1",49,R.drawable.dc211));
+        searchItemsList.add(new SearchItem("Detective Conan","Figure 2",49,R.drawable.dc221));
+        searchItemsList.add(new SearchItem("Detective Conan","T shirt",25,R.drawable.dc311));
+        searchItemsList.add(new SearchItem("Detective Conan","Beanie",19,R.drawable.dc321));
+        searchItemsList.add(new SearchItem("Demon Slayer","Volume 4",29,R.drawable.ds121));
+        searchItemsList.add(new SearchItem("Demon Slayer","Figure 1",59,R.drawable.ds211));
+        searchItemsList.add(new SearchItem("Demon Slayer","Figure 2",49,R.drawable.ds221));
+        searchItemsList.add(new SearchItem("Demon Slayer","Fox Cosplay",69,R.drawable.ds321));
+        searchItemsList.add(new SearchItem("JoJo","Volume 2",39,R.drawable.jj111));
+        searchItemsList.add(new SearchItem("JoJo","Volume 27",39,R.drawable.jj121));
+        searchItemsList.add(new SearchItem("JoJo","Figure 1",49,R.drawable.jj211));
+        searchItemsList.add(new SearchItem("JoJo","Figure 2",49,R.drawable.jj221));
+        searchItemsList.add(new SearchItem("JoJo","T shirt",19,R.drawable.jj311));
+        searchItemsList.add(new SearchItem("JoJo","Hoodie",29,R.drawable.jj321));
+        searchItemsList.add(new SearchItem("Naruto","Volume 3",29,R.drawable.n121));
+        searchItemsList.add(new SearchItem("Naruto","Figure 1",49,R.drawable.n211));
+        searchItemsList.add(new SearchItem("Naruto","Figure 2",49,R.drawable.n221));
+        searchItemsList.add(new SearchItem("Naruto","T shirt",19,R.drawable.n311));
+        searchItemsList.add(new SearchItem("Naruto","Hoodie",29,R.drawable.n321));
+
+        return searchItemsList;
+    }
+
+>>>>>>> Stashed changes
 
 }

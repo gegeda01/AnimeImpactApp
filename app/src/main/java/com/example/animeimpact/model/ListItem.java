@@ -27,6 +27,11 @@ public class ListItem {
             return l2.getPrice()-l1.getPrice();
         }
     };{
+<<<<<<< Updated upstream
+=======
+
+    }
+>>>>>>> Stashed changes
 
     }
     public String getTitle() {

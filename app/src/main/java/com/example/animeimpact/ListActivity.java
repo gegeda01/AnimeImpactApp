@@ -2,6 +2,10 @@ package com.example.animeimpact;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< Updated upstream
+=======
+import android.telecom.Call;
+>>>>>>> Stashed changes
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -77,7 +81,7 @@ public class ListActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListActivity.this,MainActivity.class);
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -20,10 +20,11 @@
         android:layout_height="wrap_content"
         android:text="BACK"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/grey_border"
         android:padding="10dp"
+        android:fontFamily="@font/fugaz_one"
         android:layout_margin="13dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,7 +37,11 @@
         android:gravity="center"
         android:layout_marginTop="68dp"
         android:textColor="@color/white"
+<<<<<<< Updated upstream
         android:textSize="36sp"
+=======
+        android:textSize="40sp"
+>>>>>>> Stashed changes
         android:fontFamily="@font/fugaz_one"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -49,6 +54,10 @@
        android:layout_height="wrap_content"
        android:text="Low-High"
        android:textSize="18sp"
+<<<<<<< Updated upstream
+=======
+       android:fontFamily="@font/fugaz_one"
+>>>>>>> Stashed changes
        android:layout_marginStart="10dp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintBottom_toTopOf="@id/listView"
@@ -62,9 +71,17 @@
        android:textSize="18sp"
        android:layout_marginEnd="10dp"
        android:layout_marginStart="90dp"
+<<<<<<< Updated upstream
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toEndOf="@id/lowToHigh"
        app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
+=======
+       android:fontFamily="@font/fugaz_one"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@id/lowToHigh"
+       app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
+
+>>>>>>> Stashed changes
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
         android:layout_width="match_parent"

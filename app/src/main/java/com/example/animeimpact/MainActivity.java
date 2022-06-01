@@ -1,9 +1,20 @@
 package com.example.animeimpact;
 
+<<<<<<< Updated upstream
+=======
+import android.content.Intent;
+>>>>>>> Stashed changes
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+<<<<<<< Updated upstream
+=======
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SearchView;
+>>>>>>> Stashed changes
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     CategoriesAdapter categoriesAdapter;
     List<CategoriesItem> categoriesItemList;
     RecyclerView categoriesViewer;
+    Button searchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
         setTopPicksViewer(topPicksItemList);
         setCategoriesViewer(categoriesItemList);
+
+        searchButton = findViewById(R.id.searchButton);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     private void setTopPicksViewer(List<TopPicksItem> datalist){
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
@@ -59,4 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 }
