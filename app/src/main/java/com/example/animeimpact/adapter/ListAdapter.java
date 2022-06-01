@@ -1,6 +1,8 @@
 package com.example.animeimpact.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.model.CategoriesItem;
 import com.example.animeimpact.model.ListItem;
@@ -33,11 +36,22 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListAdapter.ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ListAdapter.ListViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.name.setText(listItemLists.get(position).getTitle());
         holder.volume.setText(listItemLists.get(position).getVolume());
-        holder.price.setText(listItemLists.get(position).getPrice());
+        holder.price.setText(String.valueOf(listItemLists.get(position).getPrice()));
         holder.image.setImageResource(listItemLists.get(position).getImageurl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("name", listItemLists.get(position).getTitle());
+                i.putExtra("volume", listItemLists.get(position).getVolume());
+
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

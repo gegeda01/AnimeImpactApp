@@ -1,15 +1,19 @@
 package com.example.animeimpact;
 
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
 import com.example.animeimpact.adapter.CategoriesAdapter;
 import com.example.animeimpact.adapter.TopPicksAdapter;
 import com.example.animeimpact.model.CategoriesItem;
-import com.example.animeimpact.model.ListItem;
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -32,17 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
         topPicksViewer = findViewById(R.id.topPicksView);
         topPicksItemList = new ArrayList<>();
-        topPicksItemList.add(new TopPicksItem(R.drawable.conan_special_edition,"Special Black Edition","Detective Conan"));
-        topPicksItemList.add(new TopPicksItem(R.drawable.onepiece_figure,"Ichibansho Figure","One Piece"));
-        topPicksItemList.add(new TopPicksItem(R.drawable.naruto_printed_shirt,"Printed T-Shirt","Naruto"));
-        topPicksItemList.add(new TopPicksItem(R.drawable.slayer_clothing2,"Cosplay","Slayer Demon"));
-        topPicksItemList.add(new TopPicksItem(R.drawable.jojo_volume27,"Manga volume 27","Jojo"));
+        topPicksItemList = DataProvider.generateTopPicks();
 
         categoriesViewer = findViewById(R.id.categoriesView);
         categoriesItemList = new ArrayList<>();
-        categoriesItemList.add(new CategoriesItem(R.drawable.manga,"Manga"));
-        categoriesItemList.add(new CategoriesItem(R.drawable.figure,"Anime Figures"));
-        categoriesItemList.add(new CategoriesItem(R.drawable.clothing,"Clothing Store"));
+        categoriesItemList = DataProvider.generateCategories();
 
         setTopPicksViewer(topPicksItemList);
         setCategoriesViewer(categoriesItemList);
@@ -59,5 +57,6 @@ public class MainActivity extends AppCompatActivity {
         categoriesAdapter = new CategoriesAdapter(this,data);
         categoriesViewer.setAdapter(categoriesAdapter);
     }
+
 
 }
