@@ -1,37 +1,88 @@
 package com.example.animeimpact.model;
 
-public class TopPicksItem {
-    String text1;
-    String text2;
-    Integer imageurl;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.animeimpact.DataProvider;
 
-    public TopPicksItem( Integer imageurl,String text1,String text2) {
-        this.imageurl = imageurl;
-        this.text1 = text1;
-        this.text2 = text2;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+
+public class TopPicksItem implements Serializable {
+    String type;
+    String name;
+    String description;
+    Integer image;
+    int price;
+    String info;
+
+
+
+    ArrayList<String> imageset;
+
+
+
+    public TopPicksItem(Integer image, String description, String name, String type, int price, String info,ArrayList<String> imageset) {
+        this.image=image;
+        this.description = description;
+        this.name = name;
+        this.type=type;
+        this.price=price;
+        this.info = info;
+        this.imageset = imageset;
     }
 
-    public String getText1() {
-        return text1;
+
+    public String getdescription() {
+        return description;
     }
 
-    public void setId(String text1) {
-        this.text1 = text1;
+    public void setdescription(String description) {
+        this.description = description;
     }
 
-    public String getText2() {
-        return text2;
+    public String getname() {
+        return name;
     }
 
-    public void setText2(String text2) {
-        this.text1 = text2;
+    public void setname(String name) {
+        this.name = name;
     }
 
-    public Integer getImageurl() {
-        return imageurl;
+
+    public String getType() {
+        return type;
     }
 
-    public void setImageurl(Integer imageurl) {
-        this.imageurl = imageurl;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    public Integer getImage() {
+        return image;
+    }
+
+    public void setImage(Integer image) {
+        this.image = image;
+    }
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+    public ArrayList<String> getImageset() {
+        return imageset;
+    }
+
+    public void setImageset(ArrayList<String> imageset) {
+        this.imageset = imageset;
     }
 }

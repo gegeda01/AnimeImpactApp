@@ -10,7 +10,7 @@
         android:layout_height="300dp"
         android:id="@+id/touch_screen"
         android:layout_marginStart="4dp"
-        android:src="@drawable/image6"
+        app:srcCompat="@drawable/image6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         ></ImageView>

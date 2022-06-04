@@ -5,17 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.animeimpact.adapter.CategoriesAdapter;
 import com.example.animeimpact.adapter.ListAdapter;
-import com.example.animeimpact.adapter.TopPicksAdapter;
-import com.example.animeimpact.model.CategoriesItem;
-import com.example.animeimpact.model.ListItem;
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -23,16 +18,16 @@ import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
 
-
     Button btn_back;
     TextView title;
     String name;
 
+    Button btn_ascen;
+    Button btn_descen;
+
     RecyclerView listsViewer;
     ListAdapter listsAdapter;
-    List<ListItem> listsItemList;
-    List<ListItem> listItemList2;
-    List<ListItem> listItemList3;
+    List<TopPicksItem> listsItemList;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -42,71 +37,79 @@ public class ListActivity extends AppCompatActivity {
         btn_back = findViewById(R.id.onbtnBack);
         title = findViewById(R.id.listTitle);
 
+        btn_ascen = findViewById(R.id.lowToHigh);
+        btn_descen = findViewById(R.id.highToLow);
+
         name = getIntent().getStringExtra("myText");
 
-        if(name.equals("Manga")){
+
+        if(name.equals("MANGA")){
             listsViewer = findViewById(R.id.listView);
             listsItemList = new ArrayList<>();
-            listsItemList.add(new ListItem("One Piece","Volume 9","$19.99",R.drawable.onepiece1_volume9));
-            listsItemList.add(new ListItem("Detective Conan","Volume 64","$29.99",R.drawable.conan1_volume61));
-            listsItemList.add(new ListItem("JOJO","Volume 02","$39.99",R.drawable.jojos1_volume2));
-            listsItemList.add(new ListItem("Naruto","Volume 26","$29.99",R.drawable.naruto1_volume6));
-            listsItemList.add(new ListItem("Demon Slayer","Volume 03","$29.99",R.drawable.demonslayer1_volume3));
-            listsItemList.add(new ListItem("Demon Slayer","Volume 04","$29.99",R.drawable.demonslayer1_volume4));
-            listsItemList.add(new ListItem("One Piece","Volume 97","$19.99",R.drawable.onepiece_volume97));
-            listsItemList.add(new ListItem("Detective Conan","Special Black Edition","$39.99",R.drawable.conan_special_edition));
-            listsItemList.add(new ListItem("Naruto","Volume 03","$29.99",R.drawable.naruto_volume3));
+            listsItemList=getActivityItems("MANGA");
             setListsViewer(listsItemList);
-        }else if(name.equals("Anime Figures")){
+        }else if(name.equals("FIGURES")){
             listsViewer= findViewById(R.id.listView);
-            listItemList2 = new ArrayList<>();
-            listItemList2.add(new ListItem("One Piece","","$69.99",R.drawable.onepiece_figure));
-            listItemList2.add(new ListItem("Detective Conan","","$49.99",R.drawable.conan2_kaito_figure));
-            listItemList2.add(new ListItem("Detective Conan","","$49.99",R.drawable.conan2_small_figure));
-            listItemList2.add(new ListItem("One Piece","","$59.99",R.drawable.onepiece_figure2));
-            listItemList2.add(new ListItem("Slayer Demon","","$49.99",R.drawable.slayer_figure1));
-            listItemList2.add(new ListItem("Slayer Demon","","$49.99",R.drawable.slayer_figure2));
-            listItemList2.add(new ListItem("JoJo","","$49.99",R.drawable.jojo_figure1));
-            listItemList2.add(new ListItem("JoJo","","$49.99",R.drawable.jojo_figure2));
-            listItemList2.add(new ListItem("Naruto","","$49.99",R.drawable.naruto_figure1));
-            listItemList2.add(new ListItem("Naruto","","$49.99",R.drawable.naruto_figure2));
-            setListsViewer(listItemList2);
-        }else if(name.equals("Clothing Store")){
+            listsItemList = new ArrayList<>();
+            listsItemList=getActivityItems("FIGURES");
+            setListsViewer( listsItemList);
+        }else if(name.equals("CLOTHINGS")){
             listsViewer= findViewById(R.id.listView);
-            listItemList3 = new ArrayList<>();
-            listItemList3.add(new ListItem("One Piece","","$19.99",R.drawable.onepiece_clothing1));
-            listItemList3.add(new ListItem("One Piece","","$19.99",R.drawable.onepiece_clothing2));
-            listItemList3.add(new ListItem("Detective Conan","","$19.99",R.drawable.conan3_shirt));
-            listItemList3.add(new ListItem("Detective Conan","","$19.99",R.drawable.conan3_beanie));
-            listItemList3.add(new ListItem("JoJo","","$19.99",R.drawable.jojo_clothing1));
-            listItemList3.add(new ListItem("JoJo","","$19.99",R.drawable.jojo_clothing2));
-            listItemList3.add(new ListItem("Naruto","","$19.99",R.drawable.naruto_printed_shirt));
-            listItemList3.add(new ListItem("Naruto","","$19.99",R.drawable.naruto_clothing2));
-            listItemList3.add(new ListItem("Slayer Demon","","$19.99",R.drawable.slayer_clothing2));
-            listItemList3.add(new ListItem("Slayer Demon","","$19.99",R.drawable.slayer_clothing1));
-            setListsViewer(listItemList3);
+            listsItemList = new ArrayList<>();
+            listsItemList=getActivityItems("CLOTHINGS");
+            setListsViewer( listsItemList);
         }
-
 
 
         title.setText(name);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListActivity.this,MainActivity.class);
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+
+        /*btn_ascen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Collections.sort(listsItemList,ListItem.PriceLowToHigh);
+                listsAdapter.notifyDataSetChanged();
+
+            }
+        });
+
+        btn_descen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Collections.sort(listsItemList,ListItem.PriceHighToLow);
+                listsAdapter.notifyDataSetChanged();
+            }
+        });*/
     }
 
-    private void setListsViewer(List<ListItem> datalist){
+
+
+    private void setListsViewer(List<TopPicksItem> datalist){
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         listsViewer.setLayoutManager(layoutManager);
         listsAdapter = new ListAdapter(this, datalist);
         listsViewer.setAdapter(listsAdapter);
     }
 
+    public List<TopPicksItem> getActivityItems(String categoryName) {
+        List<TopPicksItem> items = DataProvider.getallItems();
+        List<TopPicksItem> categoryItems = new ArrayList<>();
+
+        for (TopPicksItem item : items) {
+
+            if (item.getType().equals(categoryName)) {
+                categoryItems.add(item);
+            }
+        }
+        return categoryItems;
+    }
 
 
 }

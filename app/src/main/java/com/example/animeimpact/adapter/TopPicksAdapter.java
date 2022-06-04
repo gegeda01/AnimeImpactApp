@@ -1,6 +1,8 @@
 package com.example.animeimpact.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.animeimpact.DataProvider;
+import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.model.TopPicksItem;
 
@@ -32,12 +36,25 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TopPicksViewHolder holder, int position) {
-        holder.myText1.setText(topPicksItemLists.get(position).getText1());
-        holder.myText2.setText(topPicksItemLists.get(position).getText2());
-        holder.myImage.setImageResource(topPicksItemLists.get(position).getImageurl());
-    }
+    public void onBindViewHolder(@NonNull TopPicksViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.myText1.setText(topPicksItemLists.get(position).getname());
+        holder.myText2.setText(topPicksItemLists.get(position).getdescription());
+        holder.myImage.setImageResource(topPicksItemLists.get(position).getImage());
+        TopPicksItem item = topPicksItemLists.get(position);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("id",item);
+                context.startActivity(i);
+                DataProvider.increaseView(item);
+            }
+        });
+    }
+    public void setItems(List<TopPicksItem> items) {
+        this.topPicksItemLists = items;
+    }
     @Override
     public int getItemCount() {
         return topPicksItemLists.size();

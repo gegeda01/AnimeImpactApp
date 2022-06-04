@@ -20,10 +20,11 @@
         android:layout_height="wrap_content"
         android:text="BACK"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/grey_border"
         android:padding="10dp"
+        android:fontFamily="@font/fugaz_one"
         android:layout_margin="13dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -36,21 +37,48 @@
         android:gravity="center"
         android:layout_marginTop="68dp"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="40sp"
+        android:fontFamily="@font/fugaz_one"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
+   <Button
+       android:id="@+id/lowToHigh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Low-High"
+       android:textSize="18sp"
+       android:fontFamily="@font/fugaz_one"
+       android:layout_marginStart="10dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/listView"
+       app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
+
+   <Button
+       android:id="@+id/highToLow"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="High-Low"
+       android:textSize="18sp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginStart="90dp"
+       android:fontFamily="@font/fugaz_one"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@id/lowToHigh"
+       app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
         android:layout_width="match_parent"
+        android:layoutAnimation="@anim/layout_animation"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listTitle">
+        app:layout_constraintTop_toBottomOf="@+id/lowToHigh">
     </androidx.recyclerview.widget.RecyclerView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

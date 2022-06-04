@@ -9,20 +9,27 @@
         <entry key="app/src/main/res/drawable/grey_boarder.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/grey_border.xml" value="0.1945" />
         <entry key="app/src/main/res/drawable/ic_anime_impact__1_.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_sort.xml" value="0.117" />
         <entry key="app/src/main/res/drawable/image_border.xml" value="0.1415" />
+        <entry key="app/src/main/res/drawable/purple_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/splash_screen.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/text.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/title_bg.xml" value="0.1945" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/font/aclonica 2.xml" value="0.15049166310389056" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/column_categories 3.xml" value="0.16973065412569474" />
         <entry key="app/src/main/res/layout/column_categories.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/list_activity.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/row_categories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/details_activity.xml" value="0.16502778965369816" />
+        <entry key="app/src/main/res/layout/image_lists.xml" value="0.13236627379873073" />
+        <entry key="app/src/main/res/layout/list_activity.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/row_categories.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_lists.xml" value="0.29465095194922936" />
         <entry key="app/src/main/res/layout/row_toppicks 2.xml" value="0.16973065412569474" />
         <entry key="app/src/main/res/layout/row_toppicks.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/search_activity.xml" value="0.19356300997280146" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.22445489525438223" />
         <entry key="app/src/main/res/menu/menu_activity_search.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/sort.xml" value="0.25" />
       </map>
     </option>
   </component>

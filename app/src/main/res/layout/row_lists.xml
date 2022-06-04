@@ -28,34 +28,47 @@
         android:id="@+id/list_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="One Piece"
+        android:textSize="26sp"
+        android:text="Item Name"
         android:layout_margin="10dp"
-        android:textColor="@color/black"
+        android:fontFamily="@font/fugaz_one"
+        android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/list_image">
     </TextView>
 
     <TextView
         android:id="@+id/list_type"
+        android:layout_marginLeft="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="Volume 9"
-        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Item Type"
+        android:textColor="@color/white"
+        android:fontFamily="@font/fugaz_one"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/list_image">
     </TextView>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/fugaz_one"
+        app:layout_constraintEnd_toStartOf="@id/list_price"
+        app:layout_constraintBottom_toBottomOf="parent"></TextView>
+    <TextView
         android:id="@+id/list_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginEnd="20dp"
-        android:text="$19.99"
-        android:textColor="@color/black"
+        android:fontFamily="@font/fugaz_one"
+        android:text="Price"
+        android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
