@@ -1,9 +1,23 @@
 package com.example.animeimpact;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+import android.widget.ListView;
+import android.widget.SearchView;
+
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -30,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     CategoriesAdapter categoriesAdapter;
     List<CategoriesItem> categoriesItemList;
     RecyclerView categoriesViewer;
+    Button searchButton;
 
 
     @Override
@@ -41,13 +56,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         topPicksViewer = findViewById(R.id.topPicksView);
+
         topPicksItemList = DataProvider.getItemsOrderedByVisits();
+
+
+        categoriesViewer = findViewById(R.id.categoriesView);
+        categoriesItemList = new ArrayList<>();
+        categoriesItemList = DataProvider.generateCategories();
+
 
         setTopPicksViewer(topPicksItemList);
         categoriesViewer = findViewById(R.id.categoriesView);
@@ -78,9 +102,6 @@ public class MainActivity extends AppCompatActivity {
         categoriesAdapter = new CategoriesAdapter(this,data);
         categoriesViewer.setAdapter(categoriesAdapter);
     }
-
-
-
 
 
 }

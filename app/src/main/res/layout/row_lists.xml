@@ -42,10 +42,12 @@
         android:layout_marginLeft="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:textSize="18sp"
         android:text="Item Type"
         android:textColor="@color/white"
         android:fontFamily="@font/fugaz_one"
+
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/list_image">
@@ -55,9 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$"
+
         android:textColor="@color/white"
         android:textSize="18sp"
         android:fontFamily="@font/fugaz_one"
+
         app:layout_constraintEnd_toStartOf="@id/list_price"
         app:layout_constraintBottom_toBottomOf="parent"></TextView>
     <TextView

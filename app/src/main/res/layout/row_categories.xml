@@ -30,7 +30,9 @@
             android:fontFamily="@font/fugaz_one"
             android:gravity="center"
             android:textColor="@color/white"
+
             android:textSize="24sp"
+
             app:layout_constraintLeft_toRightOf="@id/categoriesImage"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -16,11 +16,24 @@
         <entry key="app/src/main/res/drawable/text.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/title_bg.xml" value="0.1945" />
         <entry key="app/src/main/res/font/aclonica 2.xml" value="0.15049166310389056" />
+
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/column_categories 3.xml" value="0.16973065412569474" />
         <entry key="app/src/main/res/layout/column_categories.xml" value="0.1" />
         <entry key="app/src/main/res/layout/details_activity.xml" value="0.16502778965369816" />
         <entry key="app/src/main/res/layout/image_lists.xml" value="0.13236627379873073" />
+
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/column_categories 3.xml" value="0.16973065412569474" />
+        <entry key="app/src/main/res/layout/column_categories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/details_activity.xml" value="0.16502778965369816" />
+        <entry key="app/src/main/res/layout/image_lists.xml" value="0.13236627379873073" />
+
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/column_categories 3.xml" value="0.16973065412569474" />
+        <entry key="app/src/main/res/layout/column_categories.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/details_activity.xml" value="0.16502778965369816" />
+
         <entry key="app/src/main/res/layout/list_activity.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_categories.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_lists.xml" value="0.29465095194922936" />

@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
+
+
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -28,6 +30,15 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
 
     public SearchAdapter(Context ct, List<TopPicksItem> searchItemLists) {
+
+
+public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> implements Filterable {
+    private List<SearchItem> searchItemLists;
+    private List<SearchItem> searchItemListFull;
+    Context context;
+
+
+    public SearchAdapter(Context ct, List<SearchItem> searchItemLists) {
         context = ct;
         this.searchItemLists = searchItemLists;
         searchItemListFull = new ArrayList<>(searchItemLists);
@@ -43,10 +54,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
     @Override
     public void onBindViewHolder(@NonNull SearchAdapter.SearchViewHolder holder, @SuppressLint("RecyclerView") int position) {
+
         holder.name.setText(searchItemLists.get(position).getname());
         holder.volume.setText(searchItemLists.get(position).getdescription());
         holder.price.setText(String.valueOf(searchItemLists.get(position).getPrice()));
         holder.image.setImageResource(searchItemLists.get(position).getImage());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -84,15 +97,23 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     private Filter searchFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
+
             List<TopPicksItem> filteredList = new ArrayList<>();
+
+            List<TopPicksItem> filteredList = new ArrayList<>();
+
+
 
             if(constraint == null || constraint.length() == 0) {
                 filteredList.addAll(searchItemListFull);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
+
                 for (TopPicksItem item : searchItemListFull) {
                     if (item.getname().toLowerCase().contains(filterPattern)) {
+
+
                         filteredList.add(item);
                     }
                 }

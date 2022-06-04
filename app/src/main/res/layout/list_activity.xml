@@ -37,6 +37,7 @@
         android:gravity="center"
         android:layout_marginTop="68dp"
         android:textColor="@color/white"
+
         android:textSize="40sp"
         android:fontFamily="@font/fugaz_one"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,9 @@
        android:layout_height="wrap_content"
        android:text="Low-High"
        android:textSize="18sp"
+
        android:fontFamily="@font/fugaz_one"
+
        android:layout_marginStart="10dp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintBottom_toTopOf="@id/listView"
@@ -64,6 +67,7 @@
        android:textSize="18sp"
        android:layout_marginEnd="10dp"
        android:layout_marginStart="90dp"
+
        android:fontFamily="@font/fugaz_one"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toEndOf="@id/lowToHigh"

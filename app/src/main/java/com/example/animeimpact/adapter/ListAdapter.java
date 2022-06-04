@@ -12,7 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.example.animeimpact.DataProvider;
+
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.model.TopPicksItem;
@@ -37,11 +39,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ListViewHolder holder, @SuppressLint("RecyclerView") int position) {
+
         TopPicksItem item = listItemLists.get(position);
         holder.name.setText(listItemLists.get(position).getdescription());
         holder.volume.setText(listItemLists.get(position).getname());
         holder.price.setText(String.valueOf(listItemLists.get(position).getPrice()));
         holder.image.setImageResource(listItemLists.get(position).getImage());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -51,6 +55,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
                // i.putExtra("volume", listItemLists.get(position).getVolume())
                 context.startActivity(i);
                 DataProvider.increaseView(item);
+
             }
         });
     }

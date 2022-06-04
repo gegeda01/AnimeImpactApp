@@ -26,18 +26,22 @@
 
             </androidx.viewpager.widget.ViewPager>
 
+
             <TextView
                 android:id="@+id/itemPrice"
+
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+
                 android:background="@drawable/purple_border"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/fugaz_one"
                 android:textColor="@color/white"
                 android:textAlignment="center"
-                android:textSize="30dp"
                 android:text="Price">
+
             </TextView>
 
             <TextView
@@ -51,6 +55,7 @@
                 android:fontFamily="@font/fugaz_one"
                 android:textSize="36dp"
                 android:text="ITEM NAME">
+
             </TextView>
 
             <TextView
@@ -64,6 +69,7 @@
                 android:fontFamily="@font/fugaz_one"
                 android:textSize="20dp"
                 android:text="Item details">
+
             </TextView>
 
             <TextView
@@ -72,10 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
-                android:fontFamily="@font/fugaz_one"
                 android:textSize="16dp"
-                android:text="Item description">
+                android:text="item description"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one">
             </TextView>
 
             <Button
@@ -89,6 +95,7 @@
                 android:padding="10dp"
                 android:text="PURCHASE"
                 />
+
         </LinearLayout>
 
     </ScrollView>

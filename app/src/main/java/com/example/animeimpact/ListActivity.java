@@ -2,10 +2,22 @@ package com.example.animeimpact;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import android.telecom.Call;
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import android.widget.Toast;
+import android.widget.Toolbar;
+
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +26,8 @@ import com.example.animeimpact.adapter.ListAdapter;
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
@@ -27,7 +41,10 @@ public class ListActivity extends AppCompatActivity {
 
     RecyclerView listsViewer;
     ListAdapter listsAdapter;
+
     List<TopPicksItem> listsItemList;
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -46,7 +63,9 @@ public class ListActivity extends AppCompatActivity {
         if(name.equals("MANGA")){
             listsViewer = findViewById(R.id.listView);
             listsItemList = new ArrayList<>();
+
             listsItemList=getActivityItems("MANGA");
+
             setListsViewer(listsItemList);
         }else if(name.equals("FIGURES")){
             listsViewer= findViewById(R.id.listView);
@@ -57,7 +76,9 @@ public class ListActivity extends AppCompatActivity {
             listsViewer= findViewById(R.id.listView);
             listsItemList = new ArrayList<>();
             listsItemList=getActivityItems("CLOTHINGS");
+
             setListsViewer( listsItemList);
+
         }
 
 
@@ -71,27 +92,12 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-        /*btn_ascen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Collections.sort(listsItemList,ListItem.PriceLowToHigh);
-                listsAdapter.notifyDataSetChanged();
 
-            }
-        });
-
-        btn_descen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Collections.sort(listsItemList,ListItem.PriceHighToLow);
-                listsAdapter.notifyDataSetChanged();
-            }
-        });*/
     }
 
 
-
     private void setListsViewer(List<TopPicksItem> datalist){
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         listsViewer.setLayoutManager(layoutManager);
         listsAdapter = new ListAdapter(this, datalist);

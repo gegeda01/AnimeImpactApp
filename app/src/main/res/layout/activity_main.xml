@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
             <Button
                 android:id="@+id/searchButton"
                 android:layout_width="match_parent"
@@ -49,6 +50,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
+
             <TextView
                 android:id="@+id/topPicks"
                 android:layout_width="match_parent"
@@ -62,6 +64,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topPicksView"
@@ -81,12 +84,20 @@
         android:layout_marginTop="25dp"
         android:text="Categories"
         android:fontFamily="@font/fugaz_one"
+
         android:textSize="29sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriesView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topPicksView"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/categories"
+
 
         />
             <androidx.recyclerview.widget.RecyclerView

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,7 @@ import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
 
+
     Button btn_buy;
 
 
@@ -32,6 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_activity);
+
         Intent intent = getIntent();
         TopPicksItem item = (TopPicksItem) intent.getSerializableExtra("id");
         btn_buy = findViewById(R.id.buyButton);
@@ -50,13 +53,13 @@ public class DetailsActivity extends AppCompatActivity {
         description.setText(item.getInfo());
 
 
+
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(DetailsActivity.this,"This item has been purchased",Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
     }

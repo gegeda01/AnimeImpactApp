@@ -1,6 +1,7 @@
 package com.example.animeimpact;
 
 import com.example.animeimpact.model.CategoriesItem;
+
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -166,20 +167,21 @@ public class DataProvider {
             allitems.add(entry.getKey());
         }
         return allitems;
-    }
+
+
+
 
     public static ArrayList<CategoriesItem> generateCategories(){
         ArrayList<CategoriesItem> categoriesList = new ArrayList<CategoriesItem>();
+
 
         categoriesList.add(new CategoriesItem(R.drawable.manga,"MANGA"));
         categoriesList.add(new CategoriesItem(R.drawable.figure,"FIGURES"));
         categoriesList.add(new CategoriesItem(R.drawable.clothing,"CLOTHINGS"));
 
+
         return categoriesList;
     }
-
-
-
 
 
 }

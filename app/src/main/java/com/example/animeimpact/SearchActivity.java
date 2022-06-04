@@ -2,9 +2,18 @@ package com.example.animeimpact;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -17,13 +26,29 @@ import com.example.animeimpact.model.TopPicksItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.animeimpact.adapter.ListAdapter;
+import com.example.animeimpact.adapter.SearchAdapter;
+import com.example.animeimpact.model.ListItem;
+import com.example.animeimpact.model.SearchItem;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+
 public class SearchActivity extends AppCompatActivity {
     Button back_btn;
     TextView title;
 
     RecyclerView searchViewer;
     SearchAdapter searchAdapter;
+
     List<TopPicksItem> searchItemList;
+
+
+    List<TopPicksItem> searchItemList;
+
     SearchView searchItem;
 
 
@@ -52,7 +77,13 @@ public class SearchActivity extends AppCompatActivity {
 
         searchViewer = findViewById(R.id.searchView);
         searchItemList = new ArrayList<>();
+
         searchItemList= DataProvider.getallItems() ;
+
+
+
+        searchItemList= DataProvider.getallItems() ;
+
         title.setText("Search");
         setSearchViewer(searchItemList);
 
@@ -67,7 +98,9 @@ public class SearchActivity extends AppCompatActivity {
     }
 
 
+
     private void setSearchViewer(List<TopPicksItem> dataList){
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         searchViewer.setLayoutManager(layoutManager);
         searchAdapter = new SearchAdapter(this, dataList);
