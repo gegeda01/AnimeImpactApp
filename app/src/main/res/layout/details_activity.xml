@@ -17,6 +17,22 @@
             android:orientation="vertical"
             android:padding="13dp">
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/itemImage"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/image_border"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <TextView
+                android:id="@+id/itemPrice"
+=======
+>>>>>>> Stashed changes
             <Button
                 android:id="@+id/DetailBtnBack"
                 android:layout_width="wrap_content"
@@ -62,6 +78,10 @@
                 android:textSize="30dp"
                 android:text="$59.99">
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
                 android:background="@drawable/purple_border"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -72,6 +92,13 @@
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:text="Price">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
             </TextView>
 
@@ -83,13 +110,29 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
                 android:textSize="36dp"
                 android:text="KAITO-KID Figure">
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
                 android:textColor="@color/white"
                 android:fontFamily="@font/fugaz_one"
                 android:textSize="36dp"
                 android:text="ITEM NAME">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
             </TextView>
 
@@ -101,13 +144,29 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
                 android:textSize="20dp"
                 android:text="item details">
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
                 android:textColor="@color/white"
                 android:fontFamily="@font/fugaz_one"
                 android:textSize="20dp"
                 android:text="Item details">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
             </TextView>
 
@@ -118,10 +177,19 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
                 android:textSize="16dp"
                 android:text="item description">
             </TextView>
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
                 android:textColor="@color/white"
                 android:fontFamily="@font/fugaz_one"
                 android:textSize="16dp"
@@ -139,6 +207,13 @@
                 android:padding="10dp"
                 android:text="PURCHASE"
                 />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
         </LinearLayout>
 

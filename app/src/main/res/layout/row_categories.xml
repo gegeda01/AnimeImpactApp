@@ -31,9 +31,19 @@
             android:gravity="center"
             android:textColor="@color/white"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            android:textSize="24sp"
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
             android:textSize="20sp"
 =======
             android:textSize="24sp"
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
             app:layout_constraintLeft_toRightOf="@id/categoriesImage"
             app:layout_constraintTop_toTopOf="parent" />

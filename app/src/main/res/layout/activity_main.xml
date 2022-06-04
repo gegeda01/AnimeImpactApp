@@ -25,12 +25,35 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Anime Impact Shop"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/fugaz_one"
         android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="SEARCH"
+                android:fontFamily="@font/fugaz_one"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/grey_border"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:paddingStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+=======
+>>>>>>> Stashed changes
 <<<<<<< Updated upstream
 
     <EditText
@@ -69,6 +92,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 >>>>>>> Stashed changes
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
             <TextView
                 android:id="@+id/topPicks"
                 android:layout_width="match_parent"
@@ -82,9 +109,19 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
                 app:layout_constraintTop_toBottomOf="@+id/search" />
 =======
                 app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
 
     <androidx.recyclerview.widget.RecyclerView
@@ -106,15 +143,31 @@
         android:text="Categories"
         android:fontFamily="@font/fugaz_one"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        android:textSize="29sp"
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
         android:textSize="26sp"
 =======
         android:textSize="29sp"
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
         android:gravity="center"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topPicksView"
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> Stashed changes
 
         />
 
@@ -127,7 +180,22 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintTop_toBottomOf="@+id/categories"
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
         />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoriesView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/categories"
+
+                />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

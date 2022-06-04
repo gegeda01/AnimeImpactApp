@@ -12,6 +12,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+import com.example.animeimpact.DataProvider;
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.TopPicksDetailActivity;
@@ -37,6 +44,15 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
 
     @Override
     public void onBindViewHolder(@NonNull TopPicksViewHolder holder, @SuppressLint("RecyclerView") int position) {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        holder.myText1.setText(topPicksItemLists.get(position).getname());
+        holder.myText2.setText(topPicksItemLists.get(position).getdescription());
+        holder.myImage.setImageResource(topPicksItemLists.get(position).getImage());
+        TopPicksItem item = topPicksItemLists.get(position);
+=======
+>>>>>>> Stashed changes
         holder.myText1.setText(topPicksItemLists.get(position).getText1());
         holder.myText2.setText(topPicksItemLists.get(position).getText2());
         holder.myImage.setImageResource(topPicksItemLists.get(position).getImageurl());
@@ -53,7 +69,21 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
             }
         });
     }
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("id",item);
+                context.startActivity(i);
+                DataProvider.increaseView(item);
+            }
+        });
+    }
+    public void setItems(List<TopPicksItem> items) {
+        this.topPicksItemLists = items;
+    }
     @Override
     public int getItemCount() {
         return topPicksItemLists.size();

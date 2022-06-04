@@ -36,8 +36,16 @@
         <activity android:name=".DetailsActivity"
             android:parentActivityName=".ListActivity"></activity>
 
+<<<<<<< Updated upstream
         <activity android:name=".TopPicksDetailActivity"
             android:parentActivityName=".MainActivity"></activity>
+=======
+<<<<<<< HEAD
+=======
+        <activity android:name=".TopPicksDetailActivity"
+            android:parentActivityName=".MainActivity"></activity>
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
     </application>
 
 

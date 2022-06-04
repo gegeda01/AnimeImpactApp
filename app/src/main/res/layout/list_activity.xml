@@ -38,9 +38,19 @@
         android:layout_marginTop="68dp"
         android:textColor="@color/white"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        android:textSize="40sp"
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
         android:textSize="36sp"
 =======
         android:textSize="40sp"
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
         android:fontFamily="@font/fugaz_one"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +66,17 @@
        android:textSize="18sp"
 <<<<<<< Updated upstream
 =======
+<<<<<<< HEAD
        android:fontFamily="@font/fugaz_one"
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+       android:fontFamily="@font/fugaz_one"
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
        android:layout_marginStart="10dp"
        app:layout_constraintStart_toStartOf="parent"
@@ -72,15 +92,31 @@
        android:layout_marginEnd="10dp"
        android:layout_marginStart="90dp"
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toEndOf="@id/lowToHigh"
        app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
 =======
+<<<<<<< Updated upstream
+=======
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
+>>>>>>> Stashed changes
        android:fontFamily="@font/fugaz_one"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toEndOf="@id/lowToHigh"
        app:layout_constraintTop_toBottomOf="@id/listTitle"></Button>
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f40f470850d33e3d2975db3318ac11486b923f86
 >>>>>>> Stashed changes
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
