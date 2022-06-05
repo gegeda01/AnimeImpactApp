@@ -17,7 +17,6 @@
             android:orientation="vertical"
             android:padding="13dp">
 
-
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/itemImage"
                 android:layout_marginTop="10dp"

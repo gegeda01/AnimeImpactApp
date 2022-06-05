@@ -1,6 +1,7 @@
 package com.example.animeimpact;
 
 import com.example.animeimpact.model.CategoriesItem;
+
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DataProvider {
+
     //Set up the data map for the app
     public static final Map<TopPicksItem, Integer> totalItems = new LinkedHashMap<>();
     //Assign all the data to all the items
@@ -138,6 +140,7 @@ public class DataProvider {
         totalItems.put(t30,0);
     }
 
+
     //Increase the count everytime once this method has been called
     public static void increaseView(TopPicksItem item) {
         Integer count = totalItems.get(item);
@@ -147,6 +150,7 @@ public class DataProvider {
         count=count+1;
         totalItems.put(item, count);
     }
+
     //The following method was inspired by https://stackoverflow.com/questions/109383/sort-a-mapkey-value-by-values
     //This method is used to sort the items based on their count and return the list
     public static List<TopPicksItem> getItemsOrderedByCounts() {
@@ -162,6 +166,7 @@ public class DataProvider {
         }
         return items;
     }
+
     //Return all the items as an array list
     public static List<TopPicksItem> getallItems() {
         List<TopPicksItem> allitems = new ArrayList<>();
@@ -180,8 +185,6 @@ public class DataProvider {
 
         return categoriesList;
     }
-
-
 
 
 

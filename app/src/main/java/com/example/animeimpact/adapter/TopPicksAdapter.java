@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.animeimpact.DataProvider;
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
+import com.example.animeimpact.TopPicksDetailActivity;
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.List;

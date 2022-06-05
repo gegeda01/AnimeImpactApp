@@ -14,15 +14,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.animeimpact.DataProvider;
+
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
+
+import com.example.animeimpact.DataProvider;
+
+
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> implements Filterable {
+    private List<SearchItem> searchItemLists;
+    private List<SearchItem> searchItemListFull;
+    Context context;
+
+
+    public SearchAdapter(Context ct, List<SearchItem> searchItemLists) {
+        
     List<TopPicksItem> searchItemLists;
     List<TopPicksItem> searchItemListFull;
     Context context;
@@ -31,12 +44,15 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     //original items, second array (Full) is for Filtering method, which allows the array to change
     //base on the inputs, and also not changing the original information
     public SearchAdapter(Context ct, List<TopPicksItem> searchItemLists) {
+
         context = ct;
         this.searchItemLists = searchItemLists;
         searchItemListFull = new ArrayList<>(searchItemLists);
     }
 
+
     //Viewholder for the Search Activity
+
     @NonNull
     @Override
     public SearchAdapter.SearchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,6 +60,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         View view = inflater.inflate(R.layout.search_lists, parent, false);
         return new SearchAdapter.SearchViewHolder(view);
     }
+
 
     //Getting the information that is displayed onto each of the Cardview
     @Override
@@ -70,7 +87,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         return searchItemLists.size();
     }
 
-
+    
     //Getting the IDs from the relevant layouts
     public class SearchViewHolder extends RecyclerView.ViewHolder {
         TextView name,volume,price;
@@ -120,7 +137,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
             return results;
         }
-
 
         //Returning the final changes to the array, and sets the array to hold those specific items
         @Override

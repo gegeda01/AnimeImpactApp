@@ -5,7 +5,6 @@ import com.example.animeimpact.DataProvider;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 
 public class TopPicksItem implements Serializable {
@@ -27,6 +26,7 @@ public class TopPicksItem implements Serializable {
         this.imageset = imageset;
     }
 
+
     public String getdescription() {
         return description;
     }
@@ -37,6 +37,7 @@ public class TopPicksItem implements Serializable {
     public String getname() {
         return name;
     }
+
     public void setname(String name) {
         this.name = name;
     }

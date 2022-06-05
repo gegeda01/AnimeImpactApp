@@ -13,6 +13,10 @@ import com.example.animeimpact.R;
 
 import java.util.ArrayList;
 //This adapter was inspired by https://www.youtube.com/watch?v=nL0k2usU7I8&ab_channel=PRABEESHRK
+
+
+//This adapter was inspired by https://www.youtube.com/watch?v=nL0k2usU7I8&ab_channel=PRABEESHRK
+
 public class ImageAdapter extends PagerAdapter {
     private ArrayList<String> images;
     private Context context;

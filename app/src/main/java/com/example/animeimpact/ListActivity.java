@@ -2,11 +2,20 @@ package com.example.animeimpact;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+
+import android.telecom.Call;
+
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,13 +30,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListActivity extends AppCompatActivity {
 
+
+public class ListActivity extends AppCompatActivity {
+    
+    
     //The views and array lists that is needed in the List Activity
     TextView title;
     String name;
     RecyclerView listsViewer;
     ListAdapter listsAdapter;
+
     List<TopPicksItem> listsItemList;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,7 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.list_activity);
 
         title = findViewById(R.id.listTitle);
+
         //Receive the information passed from the adapter
         name = getIntent().getStringExtra("myText");
 
@@ -44,13 +58,14 @@ public class ListActivity extends AppCompatActivity {
         setSupportActionBar(tb);
         getSupportActionBar().setTitle(null);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
+        
+        
         //Getting the Name of the category that is pressed, and then put up the relevant Lists
         //that is needed for that specific category
         if(name.equals("MANGA")){
             listsViewer = findViewById(R.id.listView);
             listsItemList = new ArrayList<>();
+
             listsItemList=getActivityItems("MANGA");
             setListsViewer(listsItemList);
         }else if(name.equals("FIGURES")){
@@ -67,8 +82,24 @@ public class ListActivity extends AppCompatActivity {
 
         //Setting the title to the category name
         title.setText(name);
+        
+    }
+        
+        title.setText(name);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
     }
+
+
+    private void setListsViewer(List<TopPicksItem> datalist){
 
     //Set up the menu for the toolbar
     @Override
@@ -109,14 +140,15 @@ public class ListActivity extends AppCompatActivity {
         listsAdapter = new ListAdapter(this, datalist);
         listsViewer.setAdapter(listsAdapter);
     }
+    
 
+            
     //Sort all the items by their category
     public List<TopPicksItem> getActivityItems(String categoryName) {
         List<TopPicksItem> items = DataProvider.getallItems();
         List<TopPicksItem> categoryItems = new ArrayList<TopPicksItem>();
 
         for (TopPicksItem item : items) {
-
             if (item.getType().equals(categoryName)) {
                 categoryItems.add(item);
             }

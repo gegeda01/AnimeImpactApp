@@ -5,6 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+import android.widget.ListView;
+import android.widget.SearchView;
+
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -28,9 +39,21 @@ public class MainActivity extends AppCompatActivity {
     List<TopPicksItem> topPicksItemList;
 
     Button searchButton;
+
     CategoriesAdapter categoriesAdapter;
     List<CategoriesItem> categoriesItemList;
     RecyclerView categoriesViewer;
+    
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<TopPicksItem> mostVisitedItems = DataProvider.getItemsOrderedByVisits();
+        this.topPicksAdapter.setItems(mostVisitedItems);
+        this.topPicksAdapter.notifyDataSetChanged();
+    }
+
+
+
 
     //Update the main activity everytime when main activity is resumed
     @Override
@@ -49,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting the views for the Top Picks part of the page
         topPicksViewer = findViewById(R.id.topPicksView);
+
         topPicksItemList = DataProvider.getItemsOrderedByCounts();
         setTopPicksViewer(topPicksItemList);
 
@@ -56,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
         categoriesViewer = findViewById(R.id.categoriesView);
         categoriesItemList = new ArrayList<>();
         categoriesItemList = DataProvider.generateCategories();
+        setCategoriesViewer(categoriesItemList);
+
+        searchButton = findViewById(R.id.searchButton);
+        
         setCategoriesViewer(categoriesItemList);
 
         //Search button that opens up a new Search Activity to search in
@@ -85,7 +113,5 @@ public class MainActivity extends AppCompatActivity {
         categoriesAdapter = new CategoriesAdapter(this,data);
         categoriesViewer.setAdapter(categoriesAdapter);
     }
-
-
 
 }

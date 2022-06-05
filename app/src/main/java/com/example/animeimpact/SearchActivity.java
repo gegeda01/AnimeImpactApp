@@ -2,11 +2,19 @@ package com.example.animeimpact;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.Menu;
+import android.view.MenuInflater;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,15 +27,21 @@ import com.example.animeimpact.adapter.SearchAdapter;
 import com.example.animeimpact.model.TopPicksItem;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.List;
 
+
+
 public class SearchActivity extends AppCompatActivity {
+    Button back_btn;
+    
     TextView title;
 
     RecyclerView searchViewer;
     SearchAdapter searchAdapter;
     List<TopPicksItem> searchItemList;
+
     SearchView searchItem;
 
 
@@ -63,6 +77,7 @@ public class SearchActivity extends AppCompatActivity {
                 return false;
             }
         });
+        
 
         //Setting the Recycler View for the entire list
         searchViewer = findViewById(R.id.searchView);
@@ -82,10 +97,14 @@ public class SearchActivity extends AppCompatActivity {
         });
 
 
+
     }
+
+    
 
     //Setting the view of Search Page, using Recycler view
     private void setSearchViewer(List<TopPicksItem> dataList){
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         searchViewer.setLayoutManager(layoutManager);
         searchAdapter = new SearchAdapter(this, dataList);
@@ -124,4 +143,5 @@ public class SearchActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

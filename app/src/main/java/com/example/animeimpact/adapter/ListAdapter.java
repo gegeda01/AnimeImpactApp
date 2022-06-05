@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.animeimpact.DataProvider;
+
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 import com.example.animeimpact.model.TopPicksItem;
@@ -41,14 +42,30 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     //Getting the information that is displayed onto each of the Cardview
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ListViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        
         //Get the specific item based on its position
         TopPicksItem item = listItemLists.get(position);
         //Link the information to the holder
+
         holder.name.setText(listItemLists.get(position).getdescription());
         holder.volume.setText(listItemLists.get(position).getname());
         holder.price.setText(String.valueOf(listItemLists.get(position).getPrice()));
         holder.image.setImageResource(listItemLists.get(position).getImage());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, DetailsActivity.class);
+                i.putExtra("id",  item);
+               // i.putExtra("volume", listItemLists.get(position).getVolume())
+                context.startActivity(i);
+                DataProvider.increaseView(item);
+
+            }
+        });
+    }
+
+    
         //Allows for the Cardview to be clickable, and sends information to DetailActivity so it knows which
         //item it needs to go into
         holder.itemView.setOnClickListener(new View.OnClickListener(){
