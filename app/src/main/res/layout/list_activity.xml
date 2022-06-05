@@ -14,20 +14,23 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <Button
-        android:id="@+id/onbtnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BACK"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:background="@drawable/grey_border"
-        android:padding="10dp"
-        android:layout_margin="13dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </Button>
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tbLayout"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:background="@color/blue"></androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/listTitle"
@@ -36,17 +39,20 @@
         android:gravity="center"
         android:layout_marginTop="68dp"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="40sp"
+        android:fontFamily="@font/fugaz_one"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
         android:layout_width="match_parent"
+        android:layoutAnimation="@anim/layout_animation"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

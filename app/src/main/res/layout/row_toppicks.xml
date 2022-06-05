@@ -7,7 +7,7 @@
 
     <ImageView
         android:id="@+id/topPicksImage"
-        android:layout_width="80dp"
+        android:layout_width="85dp"
         android:layout_height="80dp"
         android:background="@drawable/image_border"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,11 +17,12 @@
 
     <TextView
         android:id="@+id/topPicksType"
-        android:layout_width="80dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/fugaz_one"
         android:layout_marginLeft="20dp"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +31,12 @@
 
     <TextView
         android:id="@+id/topPicksName"
-        android:layout_width="80dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/fugaz_one"
         android:layout_marginLeft="20dp"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/white"

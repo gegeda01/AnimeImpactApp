@@ -25,55 +25,43 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Anime Impact Shop"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/fugaz_one"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/instructions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Please browse the options below"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="SEARCH"
+                android:fontFamily="@font/fugaz_one"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="@drawable/grey_border"
+                android:layout_marginEnd="16dp"
+                android:drawableRight="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:paddingStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/grey_border"
-        android:drawableRight="@android:drawable/ic_menu_search"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="Search"
-        android:paddingStart="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructions" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/topPicks"
-        android:layout_marginTop="30dp"
-        android:text="Main picks for today"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search"
-        />
+            <TextView
+                android:id="@+id/topPicks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/fugaz_one"
+                android:gravity="center"
+                android:text="Main picks for today"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchButton" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topPicksView"
@@ -92,23 +80,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Categories"
-        android:textSize="20sp"
+        android:fontFamily="@font/fugaz_one"
+        android:textSize="29sp"
         android:gravity="center"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topPicksView"
-        />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriesView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/categories"
         />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoriesView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/categories"
+
+                />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

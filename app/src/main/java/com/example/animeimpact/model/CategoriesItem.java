@@ -1,8 +1,8 @@
 package com.example.animeimpact.model;
 
 public class CategoriesItem {
-    String text;
-    Integer imageurl;
+    String text;//The title of that specific category
+    Integer imageurl;//The image of that specific category
 
     public CategoriesItem(Integer imageurl,String text){
         this.imageurl=imageurl;
