@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 
-
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,12 +34,14 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    //The views,array lists and buttons that is needed in the Main Activity
     RecyclerView topPicksViewer;
     TopPicksAdapter topPicksAdapter;
     List<TopPicksItem> topPicksItemList;
 
     Button searchButton;
-    ConstraintLayout manga,figure,clothing;
+    
     CategoriesAdapter categoriesAdapter;
     List<CategoriesItem> categoriesItemList;
     RecyclerView categoriesViewer;
@@ -58,16 +59,28 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    //Update the main activity everytime when main activity is resumed
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<TopPicksItem> mostViewedItems = DataProvider.getItemsOrderedByCounts();
+        this.topPicksAdapter.setItems(mostViewedItems);
+        this.topPicksAdapter.notifyDataSetChanged();
+    }
+
+    //Setting up the main views of the first page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Setting the views for the Top Picks part of the page
         topPicksViewer = findViewById(R.id.topPicksView);
+        
+        topPicksItemList = DataProvider.getItemsOrderedByCounts();
+        setTopPicksViewer(topPicksItemList);
 
-        topPicksItemList = DataProvider.getItemsOrderedByVisits();
-
-
+        //Setting the views for the Categories part of the page
         categoriesViewer = findViewById(R.id.categoriesView);
         categoriesItemList = new ArrayList<>();
         categoriesItemList = DataProvider.generateCategories();
@@ -80,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
         setCategoriesViewer(categoriesItemList);
 
         searchButton = findViewById(R.id.searchButton);
+        
+        setCategoriesViewer(categoriesItemList);
 
+        //Search button that opens up a new Search Activity to search in
+        searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,18 +107,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    //Method to set the TopPicks View
     private void setTopPicksViewer(List<TopPicksItem> datalist){
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         topPicksViewer.setLayoutManager(layoutManager);
         topPicksAdapter = new TopPicksAdapter(this, datalist);
         topPicksViewer.setAdapter(topPicksAdapter);
     }
+
+    //Method to set the Categories View
     private void setCategoriesViewer(List<CategoriesItem> data){
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         categoriesViewer.setLayoutManager(layoutManager);
         categoriesAdapter = new CategoriesAdapter(this,data);
         categoriesViewer.setAdapter(categoriesAdapter);
     }
-
-
+    
 }

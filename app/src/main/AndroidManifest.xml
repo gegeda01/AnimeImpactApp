@@ -37,9 +37,6 @@
             android:parentActivityName=".ListActivity"></activity>
 
 
-        <activity android:name=".TopPicksDetailActivity"
-            android:parentActivityName=".MainActivity"></activity>
-
 
     </application>
 

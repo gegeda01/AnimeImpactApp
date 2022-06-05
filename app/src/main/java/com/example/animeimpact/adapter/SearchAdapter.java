@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.animeimpact.DetailsActivity;
 import com.example.animeimpact.R;
 
+import com.example.animeimpact.DataProvider;
+
 
 import com.example.animeimpact.model.TopPicksItem;
 
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> implements Filterable {
+
     private List<TopPicksItem> searchItemLists;
     private List<TopPicksItem> searchItemListFull;
     Context context;
@@ -39,10 +42,23 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
 
     public SearchAdapter(Context ct, List<SearchItem> searchItemLists) {
+
+    List<TopPicksItem> searchItemLists;
+    List<TopPicksItem> searchItemListFull;
+    Context context;
+
+    //Arrays that is needed for storing the information to List them in Search. First array is for
+    //original items, second array (Full) is for Filtering method, which allows the array to change
+    //base on the inputs, and also not changing the original information
+    public SearchAdapter(Context ct, List<TopPicksItem> searchItemLists) {
+
         context = ct;
         this.searchItemLists = searchItemLists;
         searchItemListFull = new ArrayList<>(searchItemLists);
     }
+
+
+    //Viewholder for the Search Activity
 
     @NonNull
     @Override
@@ -52,6 +68,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         return new SearchAdapter.SearchViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull SearchAdapter.SearchViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
@@ -60,14 +77,26 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         holder.price.setText(String.valueOf(searchItemLists.get(position).getPrice()));
         holder.image.setImageResource(searchItemLists.get(position).getImage());
 
+        
+    //Getting the information that is displayed onto each of the Cardview
+    @Override
+    public void onBindViewHolder(@NonNull SearchAdapter.SearchViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        TopPicksItem item = searchItemLists.get(position);
+        holder.name.setText(searchItemLists.get(position).getdescription());
+        holder.volume.setText(searchItemLists.get(position).getname());
+        holder.price.setText(String.valueOf(searchItemLists.get(position).getPrice()));
+        holder.image.setImageResource(searchItemLists.get(position).getImage());
+
+        //Allows the Cardview to be clickable, and goes to Details Activity
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, DetailsActivity.class);
-                i.putExtra("id", searchItemLists.get(position));
-
+                i.putExtra("id", item);
                 context.startActivity(i);
+                DataProvider.increaseView(item);
+
             }
         });
     }
@@ -77,6 +106,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     }
 
 
+
+    //Getting the IDs from the relevant layouts
     public class SearchViewHolder extends RecyclerView.ViewHolder {
         TextView name,volume,price;
         ImageView image;
@@ -89,6 +120,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         }
     }
 
+    //Filtering method for getting the inputs from the keyboard.
+    //Uses entire List of items, duplicates the Array to make new changes that does not affect the
+    //old array.
     @Override
     public Filter getFilter() {
         return searchFilter;
@@ -99,21 +133,20 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         protected FilterResults performFiltering(CharSequence constraint) {
 
             List<TopPicksItem> filteredList = new ArrayList<>();
-
-            List<TopPicksItem> filteredList = new ArrayList<>();
-
-
-
+            
             if(constraint == null || constraint.length() == 0) {
                 filteredList.addAll(searchItemListFull);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
-
-
+                
                 for (TopPicksItem item : searchItemListFull) {
                     if (item.getname().toLowerCase().contains(filterPattern)) {
-
-
+                        filteredList.add(item);
+                    }
+                    else if(item.getType().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                    else if(item.getdescription().toLowerCase().contains(filterPattern)){
                         filteredList.add(item);
                     }
                 }
@@ -124,7 +157,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
             return results;
         }
-
+        
+        //Returning the final changes to the array, and sets the array to hold those specific items
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             searchItemLists.clear();

@@ -27,12 +27,12 @@
         android:text="Anime Impact Shop"
         android:fontFamily="@font/fugaz_one"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
-            <Button
+   <Button
                 android:id="@+id/searchButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="20dp"
                 android:text="SEARCH"
                 android:fontFamily="@font/fugaz_one"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:background="@drawable/grey_border"
                 android:layout_marginEnd="16dp"
@@ -49,7 +49,6 @@
                 android:paddingStart="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
-
 
             <TextView
                 android:id="@+id/topPicks"
@@ -60,11 +59,10 @@
                 android:gravity="center"
                 android:text="Main picks for today"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchButton" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topPicksView"
@@ -84,20 +82,13 @@
         android:layout_marginTop="25dp"
         android:text="Categories"
         android:fontFamily="@font/fugaz_one"
-
         android:textSize="29sp"
-
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriesView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:textSize="29sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/categories"
-
+        app:layout_constraintTop_toBottomOf="@+id/topPicksView"
 
         />
             <androidx.recyclerview.widget.RecyclerView

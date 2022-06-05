@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sort1"
+        android:title="Low to High"
+        android:visible="true"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/sort2"
+        android:title="High to Low"
+        android:visible="true"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/sort3"
+        android:title="A-Z"
+        android:visible="true"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/sort4"
+        android:title="Z-A"
+        android:visible="true"
+        app:showAsAction="never"></item>
+</menu>

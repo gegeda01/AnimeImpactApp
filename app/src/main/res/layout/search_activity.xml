@@ -14,17 +14,36 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tbLayout"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolSearchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:background="@color/blue"></androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
             <Button
                 android:id="@+id/searchBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BACK"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textColor="@color/white"
                 android:background="@drawable/grey_border"
                 android:padding="10dp"
-                android:layout_margin="13dp"
+                android:fontFamily="@font/fugaz_one"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="13dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
             </Button>
@@ -36,6 +55,10 @@
                 android:gravity="center"
                 android:layout_marginTop="68dp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/fugaz_one"
+                android:layout_marginTop="120dp"
+                android:textColor="@color/white"
+                android:text="SEARCH"
                 android:textSize="36sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -46,7 +69,7 @@
                 android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="180dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +78,19 @@
                 app:layout_constraintTop_toBottomOf="@id/searchTitle"
                 android:background="@drawable/search_view_bg"
                 />
+            <TextView
+                android:id="@+id/reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/fugaz_one"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:text="No Matches"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="@id/searchView"
+                app:layout_constraintTop_toTopOf="@id/searchView"
+                android:visibility="visible"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/searchView"
@@ -67,6 +103,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/search">
             </androidx.recyclerview.widget.RecyclerView>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
