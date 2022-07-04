@@ -26,12 +26,10 @@ Install [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw_ISW
 
 <p align="left" size=60>List page</p>
 
-![detail](https://user-images.githubusercontent.com/69370835/177061919-03a92965-77b9-46f7-8dc3-2dd279b4c7ac.png)
 <img src="https://user-images.githubusercontent.com/69370835/177061919-03a92965-77b9-46f7-8dc3-2dd279b4c7ac.png" weight=380 height=380>
 
 <p align="left" size=60>Details page</p>
 
-![search](https://user-images.githubusercontent.com/69370835/177061934-62a3a036-3b79-4fa2-b521-aba0c9e00eaf.png)
 <img src="https://user-images.githubusercontent.com/69370835/177061934-62a3a036-3b79-4fa2-b521-aba0c9e00eaf.png" weight=380 height=380>
 
 <p align="left" size=60>Search page</p>
