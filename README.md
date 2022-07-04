@@ -18,3 +18,21 @@ Install [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw_ISW
 ![splash](https://user-images.githubusercontent.com/69370835/177061815-dea9b1b9-1ff8-453d-ac62-1c15036fa019.png)
 
 <p align="center">Welcome page</p>
+
+![main](https://user-images.githubusercontent.com/69370835/177061883-563d1a60-96a2-43ac-bf75-5c1c854cfbeb.png)
+
+<p align="center">Home page</p>
+
+![list](https://user-images.githubusercontent.com/69370835/177061898-dec8a854-bca7-47d8-bc60-f47e074a8b7c.png)
+
+<p align="center">List page</p>
+
+![detail](https://user-images.githubusercontent.com/69370835/177061919-03a92965-77b9-46f7-8dc3-2dd279b4c7ac.png)
+
+<p align="center">Details page</p>
+
+![search](https://user-images.githubusercontent.com/69370835/177061934-62a3a036-3b79-4fa2-b521-aba0c9e00eaf.png)
+
+<p align="center">Search page</p>
+
+
