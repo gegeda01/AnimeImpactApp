@@ -14,11 +14,9 @@ Install [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw_ISW
 
 **General overview:**
 
-
-![splash](https://user-images.githubusercontent.com/69370835/177061815-dea9b1b9-1ff8-453d-ac62-1c15036fa019.png)
 <img src="https://user-images.githubusercontent.com/69370835/177061815-dea9b1b9-1ff8-453d-ac62-1c15036fa019.png" weight=300 height=300>
 
-<p align="center">Welcome page</p>
+<p align="right" size=40>Welcome page</p>
 
 ![main](https://user-images.githubusercontent.com/69370835/177061883-563d1a60-96a2-43ac-bf75-5c1c854cfbeb.png)
 
